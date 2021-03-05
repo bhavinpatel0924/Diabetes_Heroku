@@ -7,10 +7,11 @@
 
 ### Resources Used 
 
-**Python:** Version 3.7
-**Libraries:** pandas, seaborn, matplotlib, sklearn, numpy, pickle, streamlit.
-**Streamlit Tutorial:** https://www.youtube.com/watch?v=5XnHlluw-Eo&t=334s
-**Heroku Deployment Tutorial:** https://www.youtube.com/watch?v=zK4Ch6e1zq8&list=PLtqF5YXg7GLmCvTswG32NqQypOuYkPRUE&index=5
+* **Kaggle Dataset/Github url:** 'https://raw.githubusercontent.com/anujvyas/Diabetes-Prediction-Deployment/master/kaggle_diabetes.csv'
+* **Python:** Version 3.7
+* **Libraries:** pandas, seaborn, matplotlib, sklearn, numpy, pickle, streamlit.
+* **Streamlit Tutorial:** https://www.youtube.com/watch?v=5XnHlluw-Eo&t=334s
+* **Heroku Deployment Tutorial:** https://www.youtube.com/watch?v=zK4Ch6e1zq8&list=PLtqF5YXg7GLmCvTswG32NqQypOuYkPRUE&index=5
 
 ### Data Cleaning and Feature Engineering
 
@@ -19,9 +20,13 @@
 
 ### Model Building, Performance, and Evaluation
 
-Compared Random Forest, XGBoost, and KNearestNeighbors using the recall metric. I used the recall metric for this dataset because the purpose of the dataset is predict if an individual has diabetes or not. It's very important that we try to minimize our type 2 error (False Negatives) because it's potentially harmful if we tell someone that they do not have diabetes when in actuality they do.
+Compared Random Forest, XGBoost, and KNearestNeighbors using the recall metric. I created a custom stratifiedkfold function and used a combination of train_test_split and cross_val_score to compare the scores and to avoid overfitting. I used the recall metric for this dataset because the purpose of the dataset is predict if an individual has diabetes or not. It's very important that we try to minimize our type 2 error (False Negatives) because it's potentially harmful if we tell someone that they do not have diabetes when in actuality they do.
 
-**XGBoost Recall Score:**
+* **RandomForestClassifier Recall Score:** .9883 (Performed the best)
+
+### Productionization and Deployment
+
+Created an API using the streamlit library in the Spyder editor and predicted if someone has diabetes using Pregnancy, Insulin, BMI, Age, Diabetes Pedigree, BloodPressure, Glucose as my independent features and deployed the app to the Heroku Platform. 
 
 
 
