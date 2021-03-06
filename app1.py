@@ -12,7 +12,7 @@ import pickle
 
 from PIL import Image
 
-pickle_in = open("rfc.pkl","rb")
+pickle_in = open("/Users/bhavinpatel/Downloads/diabetes_model/rfc.pkl","rb")
 rfc = pickle.load(pickle_in)
 
 #def home():
