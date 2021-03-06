@@ -5,12 +5,9 @@ Created on Thu Mar  4 19:00:39 2021
 
 @author: bhavinpatel
 """
-from sklearn.ensemble import RandomForestClassifier
 import streamlit as st
 import pickle
 
-
-from PIL import Image
 
 pickle_in = open("rfc.pkl","rb")
 rfc = pickle.load(pickle_in)
