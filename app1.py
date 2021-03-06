@@ -13,7 +13,7 @@ import pickle
 from PIL import Image
 
 pickle_in = open("rfc.pkl","rb")
-rf3 = pickle.load(pickle_in)
+rfc = pickle.load(pickle_in)
 
 #def home():
     #return "Welcome to Diabetes Predictor"
@@ -69,7 +69,7 @@ def predict_diabetes(Pregnancies,Glucose,
             
     """
     
-    pred = rf3.predict([[Pregnancies,Glucose,
+    pred = rfc.predict([[Pregnancies,Glucose,
                      BloodPressure
                      ,SkinThickness,
                      Insulin,BMI,DiabetesPedigreeFunction,
